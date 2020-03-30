@@ -11,10 +11,10 @@ export default class IndiaCovid extends Component {
       }
     
       componentDidMount() {
-        fetch('http://jsonplaceholder.typicode.com/users')
+        fetch('http://localhost:8000/v1/covid/getupdate')
         .then((response) => response.json())
         .then(indiaList => {
-            this.setState({ india_data_api: indiaList });
+            this.setState({india_data_api:indiaList["resp"][0]["data"]})
         });
 
       }
@@ -24,12 +24,12 @@ export default class IndiaCovid extends Component {
     render() {
         const india_data = this.state.india_data_api.map((item, i) => (
             <tr>
-            <th>1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th>{i +1}</th>
+            <td>{item.stateName}</td>
+            <td>{item.confirmedCase}</td>
+            <td>{item.recovered}</td>
+            <td>{item.death}</td>
+            <td>{item.active}</td>
             </tr>
         ));
 

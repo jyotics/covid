@@ -27,22 +27,23 @@ window.onload = function(){
 function App() {
   return (
     
-    <div className="App">
+    <div className="App ">
       <MenuHeader/>
 
-      <div className="row row-count">
+      <div className="row row-count container">
         <CovidCount title="Total" count="23"/>
         <CovidCount title="Active" count="23"/>
         <CovidCount title="Recovered" count="23"/>
         <CovidCount title="Death" count="0"/>
+          <IndiaCovid/>
+
+          <div className="row">
+              <Tweets/>
+              <PMTweets/>
+          </div>
       </div>
 
-      <IndiaCovid/>
-      
-      <div className="row">
-        <Tweets/>
-        <PMTweets/>
-      </div>
+
     </div>
   );
 }
