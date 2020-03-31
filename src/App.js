@@ -7,6 +7,12 @@ import PMTweets from './components/PMtweets';
 import MenuHeader from './components/menuheader';
 import Footer from './components/footer';
 
+import img1 from './images/1682046.svg';
+import img2 from './images/2585234.svg';
+import img3 from './images/2615192.svg';
+import img4 from './images/2750681.svg';
+
+
 
 class App extends Component {
 
@@ -52,14 +58,14 @@ class App extends Component {
   render() {
     
     return (
-      <div className="App ">
+      <div className="App container">
       <MenuHeader updated_since={this.state.updated_since}/>
 
-      <div className="row row-count container">
-        <CovidCount title="Total" count={this.state.confirmedCase} style="primary"/>
-        <CovidCount title="Active" count={this.state.activeCase} style="info"/>
-        <CovidCount title="Recovered" count={this.state.recovered} style="success"/>
-        <CovidCount title="Death" count={this.state.death} style="danger"/>
+      <div className="row row-count ">
+        <CovidCount title="TOTAL CASES" img={img1} count={this.state.confirmedCase} style="primary"/>
+        <CovidCount title="ACTIVE CASES" img={img2} count={this.state.activeCase} style="info"/>
+        <CovidCount title="RECOVERED CASES " img={img3} count={this.state.recovered} style="success"/>
+        <CovidCount title="DEATH CASES" img={img4} count={this.state.death} style="danger"/>
           <IndiaCovid india_data_api={this.state.india_data_api}/>
 
           <div className="row" style={{"margin-top":"50px"}}>

@@ -40,6 +40,7 @@ export default  class Tweets extends Component {
           <div class="clearfix"></div>
           <h3 style={{"text-align": "left","line-height": "1.4"}}>Recent Tweets</h3>
           <hr class="margin-bottom-10"/>
+            <div id="container1">
           <ul class="list-group list-group-dividered list-group-full">
           {this.state.tweets.map((item, i) => (
 
@@ -61,7 +62,7 @@ export default  class Tweets extends Component {
             </li>
             ))};
             
-          </ul>
+          </ul></div>
           {/* <span class="text-info">M</span> */}
         </div>
       </div>

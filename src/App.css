@@ -226,11 +226,13 @@ body{
 .card-counter{
   box-shadow: 2px 2px 10px #DADADA;
   margin: 5px;
-  padding: 20px 10px;
+  padding: 20px;
   background-color: #fff;
   height: 100px;
   border-radius: 5px;
   transition: .3s linear all;
+    height: 140px;
+    border-radius: 10px;
 }
 
 .card-counter:hover{
@@ -265,21 +267,23 @@ body{
 
 .card-counter .count-numbers{
   position: absolute;
-  right: 35px;
+  /*right: 35px;*/
   top: 20px;
   font-size: 32px;
   display: block;
+    font-weight: 600;
 }
 
 .card-counter .count-name{
   position: absolute;
-  right: 35px;
+  /*right: 35px;*/
   top: 65px;
-  font-style: italic;
   text-transform: capitalize;
   opacity: 0.5;
   display: block;
-  font-size: 18px;
+  font-size: 15px;
+    font-weight: 500;
+
 }
 
 .table td, .table th{
@@ -314,7 +318,7 @@ body{
 }
 
 .list-group {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 900px;
 }
 .media-heading{
@@ -335,4 +339,18 @@ body{
 }
 .color_g {
   color:#66bb6a;
+}
+.navbar{
+    padding:3em 0em 0em 3em !important;
+    font-weight: 600;
+}
+.card-counter img{
+    text-align: end !important;
+}
+#container1 {
+    height: 100%;
+    width: 100%;
+    border: 1px solid green;
+    overflow: hidden;
+    position: relative;
 }

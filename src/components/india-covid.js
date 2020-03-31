@@ -24,6 +24,7 @@ export default class IndiaCovid extends Component {
 
 
       return <div className="col-sm-12 table-cont" id='table-cont'>
+          <h3 style={{"text-align": "left","line-height": "1.4"}}><i className="fa fa-globe" aria-hidden="true"></i> State Wise Data</h3>
       <table className="table table-striped" >
         <thead>
             <tr>

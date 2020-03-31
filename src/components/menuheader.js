@@ -19,10 +19,10 @@ export default  class MenuHeader extends Component {
     window.location.reload(false);
   }
     render() {
-      return <div><nav className="navbar navbar-light" style={{"background-color": "#e3f2fd"}}>
-        <img src={coronavirus} width="100" height="50" />
-        
-      <a className="navbar-brand" href="#">Coronavirus disease (COVID-19) <i className="color_g">Last Updated At : </i><Moment format="YYYY/MM/DD HH:mm:ss">{this.props.updated_since }</Moment></a>
+      return <div><nav className="navbar navbar-light" style={{"background-color": ""}}>
+          <h2><i className="fa fa-bug" aria-hidden="true"></i> COVID-19</h2>
+
+          <a className="navbar-brand" href="#"><i className="color_g">Last Updated At : </i><Moment format="dddd, MMMM Do YYYY hh:mm a">{this.props.updated_since }</Moment></a>
 
 
 
