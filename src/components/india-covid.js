@@ -6,25 +6,14 @@ export default class IndiaCovid extends Component {
 
     constructor(props) {
         super(props);
-    
-        this.state = {india_data_api: []};
-      }
-    
-      componentDidMount() {
-        fetch('http://localhost:8000/v1/covid/getupdate')
-        .then((response) => response.json())
-        .then(indiaList => {
-            this.setState({india_data_api:indiaList["resp"][0]["data"]})
-        });
-
       }
     
     
 
     render() {
-        const india_data = this.state.india_data_api.map((item, i) => (
+        const india_data = this.props.india_data_api.map((item, i) => (
             <tr>
-            <th>{i +1}</th>
+            <td>{i +1}</td>
             <td>{item.stateName}</td>
             <td>{item.confirmedCase}</td>
             <td>{item.recovered}</td>

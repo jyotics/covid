@@ -11,7 +11,7 @@ export default  class Tweets extends Component {
           sourceType="timeline"
           screenName="PMOIndia"
           options={{
-            height: "400"
+            height: "1000"
           }}
           theme="light"
           noScrollbar

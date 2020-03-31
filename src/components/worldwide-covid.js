@@ -8,13 +8,11 @@ export default  class CovidCount extends Component {
     }
 
     render() {
-      return <div className="col-sm-3">
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">{this.props.title}</h5>
-          <p className="card-text">{this.props.count}</p>
-          {/* <a href="#" className="btn btn-primary">View Data</a> */}
-        </div>
+      return  <div className="col-md-3">
+      <div className={`card-counter ${ this.props.style }`}>
+        <i className="fa fa-hospital-o"></i>
+        <span className="count-numbers">{this.props.count}</span>
+        <span className="count-name">{this.props.title}</span>
       </div>
     </div>;
     }

@@ -10,30 +10,35 @@ export default  class Tweets extends Component {
   }
 
   componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/users')
+    this.fetchTweets();
+    //setInterval(this.fetchTweets, 5000); // runs every 5 seconds.
+  }
+  fetchTweets = async =>{
+    fetch('http://localhost:8000/v1/covid/gettweets?page=1&limit=10')
     .then((response) => response.json())
     .then(indiaList => {
-        this.setState({ tweets: indiaList });
+        //this.setState({ tweets: indiaList });
+        this.setState({tweets:indiaList["resp"]["docs"]})
     });
-
   }
 
     render() {
 
+      console.log(this.state.tweets);
 
 
-
-      return <div className="col-sm-6">
+      return <div className="col-sm-6" >
         
   
 
-<div class="row">
+<div class="row mt-6">
     <div class="col-md-12 col-xs-12">
       <div class="panel">
         
         <div class="panel-body">
           
           <div class="clearfix"></div>
+          <h3 style={{"text-align": "left","line-height": "1.4"}}>Recent Tweets</h3>
           <hr class="margin-bottom-10"/>
           <ul class="list-group list-group-dividered list-group-full">
           {this.state.tweets.map((item, i) => (
@@ -42,22 +47,22 @@ export default  class Tweets extends Component {
               <div class="media">
                 <div class="media-left">
                   <a class="avatar avatar-online" href="javascript:void(0)">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="..."/>
+                    <img src={`${ item.user.profilePic }`} alt="..."/>
                     <i></i>
                   </a>
                 </div>
                 <div class="media-body">
-                  <small class="text-muted pull-right">Just now</small>
-                  <h4 class="media-heading">@Ramon Dunn</h4>
-                  <div>Lorem ipsum Veniam aliquip culpa laboris minim tempor labore
-                    commodo officia veniam non in in in.</div>
+                  <small class="text-muted pull-right"><a href={`${item.tweetAddress }`} target="_blank"><i className="fa fa-twitter"></i></a></small>
+                  <h4 className="media-heading">{item.user.name}</h4>
+                  <p className="tweets_heading">@{item.user.screen_name}</p>
+                  <div style={{"margin": "13px","text-align": "left"}}>{item.text}</div>
                 </div>
               </div>
             </li>
             ))};
             
           </ul>
-          <span class="text-info">163K users active</span>
+          {/* <span class="text-info">M</span> */}
         </div>
       </div>
     </div>
