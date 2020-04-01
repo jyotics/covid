@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
-import moment from 'moment/min/moment-with-locales';
+import 'moment-timezone';
 
+//moment.tz.setDefault("America/New_York");
 
 import '../fonts/FiraSans-Regular.ttf';
 
 
 
-//moment.tz.setDefault("Asia/Kolkata");
 
 export default  class MenuHeader extends Component {
 
@@ -24,7 +24,7 @@ export default  class MenuHeader extends Component {
       return <div><nav className="navbar navbar-light">
           <h2><i className="fa fa-bug" aria-hidden="true"></i> COVID-19</h2>
 
-          <a className="navbar-brand" href="#"><i className="color_g">Last Updated At : </i><Moment format="dddd, MMMM Do YYYY hh:mm a">{this.props.updated_since }</Moment></a>
+          <a className="navbar-brand" href="#"><i className="color_g">Last Updated At : </i><Moment format="dddd, MMMM Do YYYY hh:mm a" tz="Asia/Kolkata">{this.props.updated_since }</Moment></a>
 
 
 
