@@ -314,7 +314,7 @@ body{
   border-bottom-width: 0;
 }
 .table td, .table th {
-  width: 14%;
+  width: 12%;
 }
 
 .list-group {
@@ -359,5 +359,9 @@ body{
   overflow-y: scroll;
     padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
     box-sizing: content-box;
+
+}
+.navbar-brand{
+  font-size: 1rem !important;
 
 }
