@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import coronavirus from '../images/coronavirus.png';
 import Moment from 'react-moment';
+import moment from 'moment/min/moment-with-locales';
+
 
 import '../fonts/FiraSans-Regular.ttf';
 
 
 
+//moment.tz.setDefault("Asia/Kolkata");
 
 export default  class MenuHeader extends Component {
 

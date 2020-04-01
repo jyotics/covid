@@ -318,7 +318,7 @@ body{
 }
 
 .list-group {
-  overflow-y: auto;
+  /* overflow-y: auto; */
   height: 900px;
 }
 .media-heading{
@@ -347,10 +347,17 @@ body{
 .card-counter img{
     text-align: end !important;
 }
-#container1 {
-    height: 100%;
-    width: 100%;
-    border: 1px solid green;
-    overflow: hidden;
-    position: relative;
+#container1{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#container2{
+  width: 100%;
+  height: 99%;
+  overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box;
+
 }
