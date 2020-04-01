@@ -30,7 +30,7 @@ export default class IndiaCovid extends Component {
               <h3 style={{"text-align": "left", "line-height": "1.4"}}><i className="fa fa-globe" aria-hidden="true"></i> State
                   Wise Data</h3>
           </div>
-          <table className="table">
+          <table className="table table-responsive-sm">
               <thead>
               <tr>
                   <th className="col-xs-2">#</th>
