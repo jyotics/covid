@@ -58,7 +58,8 @@ class App extends Component {
   render() {
     
     return (
-      <div className="App container">
+      <div className="App">
+        <div className="container">
       <MenuHeader updated_since={this.state.updated_since}/>
 
       <div className="row row-count ">
@@ -73,7 +74,7 @@ class App extends Component {
               <PMTweets/>
           </div>
       </div>
-
+      </div>
     <Footer/>
     </div>
     );
