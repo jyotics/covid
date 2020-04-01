@@ -12,35 +12,41 @@ export default class IndiaCovid extends Component {
 
     render() {
         const india_data = this.props.india_data_api.map((item, i) => (
-            <tr>
-            <td>{i +1}</td>
-            <td>{item.stateName}</td>
-            <td>{item.confirmedCase}</td>
-            <td>{item.recovered}</td>
-            <td>{item.death}</td>
-            <td>{item.active}</td>
-            </tr>
+        <tr>
+            <td className="col-xs-2">{i +1}</td>
+            <td className="col-xs-8">{item.stateName}</td>
+            <td className="col-xs-2">{item.confirmedCase}</td>
+            <td className="col-xs-2">{item.recovered}</td>
+            <td className="col-xs-2">{item.death}</td>
+            <td className="col-xs-2">{item.active}</td>
+        </tr>
+
+
         ));
 
 
-      return <div className="col-sm-12 table-cont" id='table-cont'>
-          <h3 style={{"textAlign": "left","lineHeight": "1.4"}}><i className="fa fa-globe" aria-hidden="true"></i> State Wise Data</h3>
-      <table className="table table-striped" >
-        <thead>
-            <tr>
-            <th scope="col">S No</th>
-            <th scope="col">State Name</th>
-            <th scope="col">Confirmed Cases</th>
-            <th scope="col">Recovered</th>
-            <th scope="col">Death</th>
-            <th scope="col">Active Cases</th>
-            </tr>
-        </thead>
-        <tbody>
-            {india_data}
-          </tbody>
-        </table>
-    </div>;
+      return <div className="col-md-12">
+          <div className="panel-heading">
+              <h3 style={{"text-align": "left", "line-height": "1.4"}}><i className="fa fa-globe" aria-hidden="true"></i> State
+                  Wise Data</h3>
+          </div>
+          <table className="table">
+              <thead>
+              <tr>
+                  <th className="col-xs-2">#</th>
+                  <th className="col-xs-2">State</th>
+                  <th className="col-xs-2">Confirmed</th>
+                  <th className="col-xs-2">Recoverd</th>
+                  <th className="col-xs-2">Death</th>
+                  <th className="col-xs-2">Active</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              {india_data}
+              </tbody>
+          </table>
+      </div>
     }
 
     

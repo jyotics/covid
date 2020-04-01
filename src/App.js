@@ -77,7 +77,6 @@ class App extends Component {
           </div>
       </div>
       </div>
-    <Footer/>
     </div>
     );
   }

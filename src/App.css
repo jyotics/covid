@@ -294,28 +294,6 @@ body{
 /*new table*/
 
 
-.table-striped thead {
-  width: 100%;
-
-}
-.table-cont{
-  margin-top: 24px;
-}
-.table-striped tbody {
-  height: 230px;
-  overflow-y: auto;
-  width: 100%;
-}
-.table-striped tbody ,.table-striped thead{
-   display: block; 
-}
-.table-striped tbody td, .table-striped thead > tr> th {
-  /* float: left; */
-  border-bottom-width: 0;
-}
-.table td, .table th {
-  width: 12%;
-}
 
 .list-group {
   /* overflow-y: auto; */
@@ -364,4 +342,32 @@ body{
 .navbar-brand{
   font-size: 1rem !important;
 
+}
+
+@media only screen and (max-width: 575px) {
+    #container2 {
+        padding-right: 0px !important;
+    }
+    .auto_r {
+        padding-right: 0px !important;
+    }
+
+}
+
+.auto_r{
+    font-size: 13px;
+    font-weight: 100;
+    margin-bottom: -64px;
+    padding-right: 50px;
+}
+.container{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+}
+.panel-heading {
+    margin-top: 24px;
+}
+.table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
 }
