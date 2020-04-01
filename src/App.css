@@ -7,13 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
 @font-face {
   font-family: 'FiraSans';
   src: local('FiraSans'), url(./fonts/FiraSans-Regular.ttf) format('truetype');
@@ -319,8 +312,8 @@ body{
   color:#66bb6a;
 }
 .navbar{
-    padding:3em 0em 0em 3em !important;
-    font-weight: 600;
+    padding-top: 3em !important;
+    font-weight: 100;
 }
 .card-counter img{
     text-align: end !important;

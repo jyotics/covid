@@ -24,7 +24,7 @@ export default  class MenuHeader extends Component {
       return <div><nav className="navbar navbar-light">
           <h2><i className="fa fa-bug" aria-hidden="true"></i> COVID-19</h2>
 
-          <p className="auto_r">Auto Refreshed after 5 minutes</p>
+          <span>Auto Refreshed after 5 minutes</span>
           
 
 

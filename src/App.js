@@ -64,11 +64,12 @@ class App extends Component {
         <div className="container">
       <MenuHeader updated_since={this.state.updated_since}/>
 
-      <div className="row row-count ">
+      <div className="row">
         <CovidCount title="TOTAL CASES" img={img1} count={this.state.confirmedCase} style="primary"/>
         <CovidCount title="ACTIVE CASES" img={img2} count={this.state.activeCase} style="info"/>
         <CovidCount title="RECOVERED CASES " img={img3} count={this.state.recovered} style="success"/>
         <CovidCount title="DEATH CASES" img={img4} count={this.state.death} style="danger"/>
+
           <IndiaCovid india_data_api={this.state.india_data_api}/>
 
           <div className="row" style={{"marginTop":"50px"}}>
@@ -77,7 +78,7 @@ class App extends Component {
           </div>
       </div>
       </div>
-    </div>
+      </div>
     );
   }
 }
