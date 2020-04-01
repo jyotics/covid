@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   apiCall = async () =>{
-      fetch('http://localhost:8000/v1/covid/getupdate')
+      fetch('https://livesupdates.com/stats/v1/covid/getupdate')
       .then((response) => response.json())
       .then(async indiaList => {
         if(indiaList.resp.length >0){

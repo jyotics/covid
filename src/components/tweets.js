@@ -14,7 +14,7 @@ export default  class Tweets extends Component {
     //setInterval(this.fetchTweets, 5000); // runs every 5 seconds.
   }
   fetchTweets = async =>{
-    fetch('http://localhost:8000/v1/covid/gettweets?page=1&limit=10')
+    fetch('https://livesupdates.com/stats/v1/covid/gettweets?page=1&limit=10')
     .then((response) => response.json())
     .then(indiaList => {
         //this.setState({ tweets: indiaList });
