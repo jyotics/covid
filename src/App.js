@@ -5,7 +5,7 @@ import CovidCount from './components/worldwide-covid';
 import Tweets from './components/tweets';
 import PMTweets from './components/PMtweets';
 import MenuHeader from './components/menuheader';
-import Footer from './components/footer';
+import ScrollToTop from 'react-scroll-up';
 
 import img1 from './images/1682046.svg';
 import img2 from './images/2585234.svg';
@@ -78,6 +78,9 @@ class App extends Component {
           </div>
       </div>
       </div>
+          <ScrollToTop showUnder={160}>
+              <span id="button"></span>
+          </ScrollToTop>
       </div>
     );
   }
