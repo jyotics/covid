@@ -31,29 +31,29 @@ export default  class Tweets extends Component {
         
   
 
-<div class="row mt-6">
-    <div class="col-md-12 col-xs-12">
-      <div class="panel">
+<div className="row mt-6">
+    <div className="col-md-12 col-xs-12">
+      <div className="panel">
         
-        <div class="panel-body">
+        <div className="panel-body">
           
-          <div class="clearfix"></div>
-          <h3 style={{"text-align": "left","line-height": "1.4"}}>Recent Tweets</h3>
-          <hr class="margin-bottom-10"/>
+          <div className="clearfix"></div>
+          <h3 style={{"textAlign": "left","lineHeight": "1.4"}}>Recent Tweets</h3>
+          <hr className="margin-bottom-10"/>
             <div id="container1">
-          <ul class="list-group list-group-dividered list-group-full">
+          <ul className="list-group list-group-dividered list-group-full">
           {this.state.tweets.map((item, i) => (
 
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <a class="avatar avatar-online" href="javascript:void(0)">
+            <li className="list-group-item" key={i}>
+              <div className="media">
+                <div className="media-left">
+                  <a className="avatar avatar-online" href="javascript:void(0)">
                     <img src={`${ item.user.profilePic }`} alt="..."/>
                     <i></i>
                   </a>
                 </div>
-                <div class="media-body">
-                  <small class="text-muted pull-right"><a href={`${item.tweetAddress }`} target="_blank"><i className="fa fa-twitter"></i></a></small>
+                <div className="media-body">
+                  <small className="text-muted pull-right"><a href={`${item.tweetAddress }`} target="_blank"><i className="fa fa-twitter"></i></a></small>
                   <h4 className="media-heading">{item.user.name}</h4>
                   <p className="tweets_heading">@{item.user.screen_name}</p>
                   <div style={{"margin": "13px","text-align": "left"}}>{item.text}</div>

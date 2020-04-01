@@ -8,7 +8,7 @@ export default  class Tweets extends Component {
       <section className="twitterContainer">
       <div className="twitter-embed selfCenter spaceBetween standardWidth">
         <TwitterTimelineEmbed
-          sourceType="timeline"
+          sourceType="profile"
           screenName="PMOIndia"
           options={{
             height: "1000"
