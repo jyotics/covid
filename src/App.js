@@ -12,6 +12,8 @@ import img2 from './images/2585234.svg';
 import img3 from './images/2615192.svg';
 import img4 from './images/2750681.svg';
 
+import News from './components/news';
+
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-000000-01');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -69,7 +71,7 @@ class App extends Component {
         <CovidCount title="ACTIVE CASES" img={img2} count={this.state.activeCase} style="info"/>
         <CovidCount title="RECOVERED CASES " img={img3} count={this.state.recovered} style="success"/>
         <CovidCount title="DEATH CASES" img={img4} count={this.state.death} style="danger"/>
-
+        <News/>
           <IndiaCovid india_data_api={this.state.india_data_api}/>
 
           <div className="row" style={{"marginTop":"50px"}}>
