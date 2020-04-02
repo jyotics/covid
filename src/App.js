@@ -36,7 +36,9 @@ class App extends Component {
       .then((response) => response.json())
       .then(async indiaList => {
         if(indiaList.resp.length >0){
-          this.setState({india_data_api:indiaList["resp"][0]["data"],updated_since:indiaList["resp"][0]['createdAt']})
+
+            let sortedObj = indiaList["resp"][0]["data"].sort((a, b) => (parseInt(a.confirmedCase) > parseInt(b.confirmedCase)) ? -1 : 1)
+          this.setState({india_data_api:sortedObj,updated_since:indiaList["resp"][0]['createdAt']})
         }
           await this.mapParameters()
       });
