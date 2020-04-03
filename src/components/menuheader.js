@@ -22,7 +22,8 @@ export default  class MenuHeader extends Component {
   }
     render() {
       return <div><nav className="navbar fixed-top navbar-light bg-light">
-        
+       <h2><i className="fa fa-newspaper" aria-hidden="true"></i> Latest Updates</h2>
+
 
           {/* <span>Auto Refreshed after 5 minutes</span> */}
           

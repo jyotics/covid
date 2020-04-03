@@ -5,6 +5,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 export default  class Footer extends Component {
     render() {
+
       return <footer className="page-footer font-small cyan darken-3">
                   <div class="row">
                       <div class="col-md-12 py-5">
@@ -22,8 +23,7 @@ export default  class Footer extends Component {
               <div class="footer-copyright text-center py-3">© 2020 Copyright:
                   <a href="https://livesupdates.com/"> livesupdates.com</a>
               </div>
-      
-      </footer>
+            </footer>
       
     }
   }
