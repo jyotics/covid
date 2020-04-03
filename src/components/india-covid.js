@@ -12,7 +12,7 @@ export default class IndiaCovid extends Component {
 
     render() {
         const india_data = this.props.india_data_api.map((item, i) => (
-        <tr>
+        <tr key={item.id}>
             <td className="col-xs-2">{i +1}</td>
             <td className="col-xs-8">{item.stateName}</td>
             <td className="col-xs-2">{item.confirmedCase}</td>
@@ -27,7 +27,7 @@ export default class IndiaCovid extends Component {
 
       return <div className="col-md-12">
           <div className="panel-heading">
-              <h3 style={{"text-align": "left", "line-height": "1.4"}}><i className="fa fa-globe" aria-hidden="true"></i> State
+              <h3 style={{"textAlign": "left", "lineHeight": "1.4"}}><i className="fa fa-globe" aria-hidden="true"></i> State
                   Wise Data</h3>
           </div>
           <table className="table table-responsive-sm">

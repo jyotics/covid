@@ -57,7 +57,7 @@ export default  class Tweets extends Component {
                   <small className="text-muted pull-right"><a href={`${item.tweetAddress }`} target="_blank"><i className="fa fa-twitter"></i></a></small>
                   <h4 className="media-heading">{item.user.name}</h4>
                   <p className="tweets_heading">@{item.user.screen_name}</p>
-                  <div style={{"margin": "13px","text-align": "left"}}>{item.text}</div>
+                  <div style={{"margin": "13px","textAlign": "left"}}>{item.text}</div>
                 </div>
               </div>
             </li>

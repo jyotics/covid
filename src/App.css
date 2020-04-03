@@ -345,6 +345,11 @@ body{
         padding-right: 0px !important;
     }
 
+    .carousel-item .col-md-4 .mb-2{
+      height :370px !important;
+    }
+
+
 }
 
 .auto_r{
@@ -408,7 +413,7 @@ body{
 }
 
 .carousel-item .col-md-4 .mb-2{
-  height :400px;
+  height :312px;
 }
 
 .carousel-item .col-md-3 a{
@@ -422,9 +427,17 @@ body{
 
 .carousel-item .col-md-4 .img-fluid{
   height:162px;
+  width:100%;
 }
 
+
+
 }
+
+.carousel-item .col-md-4 .img-fluid{
+  width:100%;
+}
+
 
 .carousel-item .col-md-3 .card-body{
   padding: 1.25rem 1rem;
@@ -440,6 +453,10 @@ body{
 .controls-top-button .btn-floating{
   padding: 0px 10px 10px 10px;
     /* background-color:red; */
+}
+.carousel-item .col-md-4 .card-text{
+font-size: 10px;
+    text-align: end;
 }
 
 .carousel-indicators{

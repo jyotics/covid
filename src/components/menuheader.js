@@ -21,10 +21,10 @@ export default  class MenuHeader extends Component {
     window.location.reload(false);
   }
     render() {
-      return <div><nav className="navbar navbar-light">
-          <h2><i className="fa fa-bug" aria-hidden="true"></i> COVID-19</h2>
+      return <div><nav className="navbar fixed-top navbar-light bg-light">
+        
 
-          <span>Auto Refreshed after 5 minutes</span>
+          {/* <span>Auto Refreshed after 5 minutes</span> */}
           
 
 
