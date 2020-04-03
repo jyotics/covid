@@ -18,7 +18,7 @@ export default  class MenuHeader extends Component {
 
 
     render() {
-      return <div><nav className="navbar fixed-top navbar-light" style={{"background-color":"rgb(255, 160, 122)","color":"white","justify-content": "center"}}>
+      return <div><nav className="navbar fixed-top navbar-light" style={{"background-color":"#F44336","color":"white","justify-content": "center"}}>
        <h2><a href="/"><i className="fa fa-newspaper" aria-hidden="true"></i> Latest Updates</a></h2>
       </nav>
     </div>;

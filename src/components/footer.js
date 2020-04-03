@@ -5,7 +5,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 export default  class Footer extends Component {
     render() {
-      return <footer className="page-footer font-small" style={{"background-color":"rgb(255, 160, 122)","color":"white"}}>
+      return <footer className="page-footer font-small" style={{"background-color":"#F44336","color":"white"}}>
                   <div class="row">
                       <div class="col-md-12 py-5">
                           <div class="mb-5 flex-center">
