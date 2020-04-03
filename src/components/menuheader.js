@@ -17,20 +17,11 @@ export default  class MenuHeader extends Component {
   }
 
 
-  refreshPage = () => {
-    window.location.reload(false);
-  }
     render() {
-      return <div><nav className="navbar fixed-top navbar-light bg-light">
-       <h2><i className="fa fa-newspaper" aria-hidden="true"></i> Latest Updates</h2>
-
-
-          {/* <span>Auto Refreshed after 5 minutes</span> */}
-          
-
-
-
-    </nav></div>;
+      return <div><nav className="navbar fixed-top navbar-light" style={{"background-color":"rgb(255, 160, 122)","color":"white","justify-content": "center"}}>
+       <h2><a href="/"><i className="fa fa-newspaper" aria-hidden="true"></i> Latest Updates</a></h2>
+      </nav>
+    </div>;
 
     }
   }

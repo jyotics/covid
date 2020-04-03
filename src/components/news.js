@@ -34,7 +34,7 @@ export default  class News extends Component {
 }
 
   fetchNews = async =>{
-    var url = `https://livesupdates.com/stats/v1/covid/getnews?page=${this.state.activeItem }&limit=3`
+    var url = `https://livesupdates.com/stats/v1/covid/getnews?page=${this.state.activeItem }&limit=6`
     fetch(url)
     .then((response) => response.json())
     .then(indiaList => {
@@ -82,7 +82,7 @@ export default  class News extends Component {
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src={item.urlToImage} />
                   <MDBCardBody>
-                  <MDBCardTitle >{item.title}</MDBCardTitle>
+                  <MDBCardTitle ><a href={item.url} target="_blank">{item.title}</a></MDBCardTitle>
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>
@@ -100,7 +100,7 @@ export default  class News extends Component {
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src={item.urlToImage} />
                   <MDBCardBody>
-                  <MDBCardTitle >{item.title}</MDBCardTitle>
+                  <MDBCardTitle ><a href={item.url} target="_blank">{item.title}</a></MDBCardTitle>
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>
@@ -118,7 +118,7 @@ export default  class News extends Component {
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src={item.urlToImage}/>
                   <MDBCardBody>
-                  <MDBCardTitle >{item.title}</MDBCardTitle>
+                  <MDBCardTitle ><a href={item.url} target="_blank">{item.title}</a></MDBCardTitle>
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>

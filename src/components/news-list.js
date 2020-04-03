@@ -28,7 +28,7 @@ export default  class NewsList extends Component {
 
   fetchNews = async(prevStateNews) =>{
     console.log("HERE",prevStateNews)
-    var url = `https://livesupdates.com/stats/v1/covid/getnews?page=${this.state.activeItem }&limit=6`
+    var url = `https://livesupdates.com/stats/v1/covid/getnews?page=${this.state.activeItem }&limit=9`
     fetch(url)
     .then((response) => response.json())
     .then(indiaList => {
@@ -50,13 +50,13 @@ export default  class NewsList extends Component {
       }
     }
     render() {
-      return   <MDBContainer>
+      return   <MDBContainer style={{"marginTop":"123px"}}>
 
-<h3 style={{"textAlign": "left", "lineHeight": "1.4","padding" :"10px"}}><i className="fa fa-newspaper-o" aria-hidden="true"></i>News</h3>
+<h3 style={{"textAlign": "left", "lineHeight": "1.4","padding" :"10px"}}><i className="fa fa-newspaper-o" aria-hidden="true"></i> News</h3>
 
 
 
-      <MDBCarousel activeItem={1} length={3}  showControls={true} showIndicators={true} multiItem>
+      <MDBCarousel activeItem={1} length={3}  showControls={true} showIndicators={true} multiItem >
         <MDBCarouselInner>
           <MDBRow>
             <MDBCarouselItem itemId="1">
@@ -66,7 +66,7 @@ export default  class NewsList extends Component {
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src={item.urlToImage} />
                   <MDBCardBody>
-                  <MDBCardTitle href={item.url}>{item.title}</MDBCardTitle>
+                      <MDBCardTitle ><a href={item.url} target="_blank">{item.title}</a></MDBCardTitle>
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>
@@ -84,7 +84,7 @@ export default  class NewsList extends Component {
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src={item.urlToImage} />
                   <MDBCardBody>
-                  <MDBCardTitle href={item.url} >{item.title}</MDBCardTitle>
+                  <MDBCardTitle ><a href={item.url} target="_blank">{item.title}</a></MDBCardTitle>
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>
@@ -102,7 +102,7 @@ export default  class NewsList extends Component {
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src={item.urlToImage}/>
                   <MDBCardBody>
-                  <MDBCardTitle href={item.url}>{item.title}</MDBCardTitle>
+                  <MDBCardTitle ><a href={item.url} target="_blank">{item.title}</a></MDBCardTitle>
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>

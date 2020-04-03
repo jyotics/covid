@@ -82,7 +82,7 @@ class App extends Component {
          
         
       
-      <div style={{"marginTop":"100px"}}>
+      <div style={{"marginTop":"123px"}}>
       <h2><i className="fa fa-bug" aria-hidden="true"></i> COVID-19</h2>
       <div className="row">
        

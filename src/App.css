@@ -458,10 +458,23 @@ body{
 font-size: 10px;
     text-align: end;
 }
+.carousel-item .col-md-4 a{
+    color: #000;
+    font-weight: bold;
+}
 
 .carousel-indicators{
   display: none !important;
 }
-.navbar p {
-  float:center !important;
+.navbar a {
+    color:white !important;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
 }
