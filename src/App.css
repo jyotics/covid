@@ -462,3 +462,6 @@ font-size: 10px;
 .carousel-indicators{
   display: none !important;
 }
+.navbar p {
+  float:center !important;
+}

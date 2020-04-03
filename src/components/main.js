@@ -82,12 +82,16 @@ class App extends Component {
          
         
       
-
+      <div style={{"marginTop":"100px"}}>
+      <h2><i className="fa fa-bug" aria-hidden="true"></i> COVID-19</h2>
       <div className="row">
+       
+        
         <CovidCount title="TOTAL CASES" img={img1} count={this.state.confirmedCase} style="primary"/>
         <CovidCount title="ACTIVE CASES" img={img2} count={this.state.activeCase} style="info"/>
         <CovidCount title="RECOVERED CASES " img={img3} count={this.state.recovered} style="success"/>
         <CovidCount title="DEATH CASES" img={img4} count={this.state.death} style="danger"/>
+        
         <News/>
 
        
@@ -101,7 +105,7 @@ class App extends Component {
           <ScrollToTop showUnder={160}>
               <span id="button"></span>
           </ScrollToTop>
-      </div>
+      </div></div>
 
 
      
