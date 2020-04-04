@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage,
-    MDBCardBody, MDBCardTitle,MDBCardText, MDBBtn } from "mdbreact";
+    MDBCardBody, MDBCardTitle,MDBCardText, MDBBtn ,MDBIcon} from "mdbreact";
 
 
 
@@ -70,7 +70,13 @@ export default  class NewsList extends Component {
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>
+                      <div class="row">
+                          <div class="col-4"><MDBIcon far icon="angry" size="lg"/></div>
+                          <div className="col-4"><MDBIcon fab icon="angellist" size="lg" /></div>
+                          <div className="col-4"><MDBIcon far icon="smile" size="lg"/></div>
+                      </div>
                     {/* <MDBBtn color="primary" href={item.url} target="_blank">Read More</MDBBtn> */}
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -88,6 +94,11 @@ export default  class NewsList extends Component {
                     <MDBCardText>
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>
+                      <div className="row">
+                          <div className="col-4"><MDBIcon far icon="angry" size="lg"/></div>
+                          <div className="col-4"><MDBIcon fab icon="angellist" size="lg"/></div>
+                          <div className="col-4"><MDBIcon far icon="smile" size="lg"/></div>
+                      </div>
                     {/* <MDBBtn color="primary" href={item.url} target="_blank">Read More</MDBBtn> */}
                   </MDBCardBody>
                 </MDBCard>
@@ -107,6 +118,11 @@ export default  class NewsList extends Component {
                     <Moment format="dddd, MMMM Do YYYY">{item.publishedAt}</Moment>
                     </MDBCardText>
                     {/* <MDBBtn color="primary" href={item.url} target="_blank">Read More</MDBBtn> */}
+                      <div className="row">
+                          <div className="col-4"><MDBIcon far icon="angry" size="lg"/></div>
+                          <div className="col-4"><MDBIcon fab icon="angellist" size="lg"/></div>
+                          <div className="col-4"><MDBIcon far icon="smile" size="lg"/></div>
+                      </div>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>

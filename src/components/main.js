@@ -4,25 +4,14 @@ import IndiaCovid from '../components/india-covid';
 import CovidCount from '../components/worldwide-covid';
 import Tweets from '../components/tweets';
 import PMTweets from '../components/PMtweets';
-
-
-import NewsList from '../components/news-list';
-
-
-import MenuHeader from '../components/menuheader';
+import Treanding from '../components/trending';
 import ScrollToTop from 'react-scroll-up';
 
 import img1 from '../images/1682046.svg';
 import img2 from '../images/2585234.svg';
 import img3 from '../images/2615192.svg';
 import img4 from '../images/2750681.svg';
-import {MDBBtn } from "mdbreact";
 import News from '../components/news';
-import {
-  BrowserRouter as Router,Switch,
-  Route,
-  Link,
-} from 'react-router-dom'
 
 
 import ReactGA from 'react-ga';
@@ -75,28 +64,24 @@ class App extends Component {
   render() {
     
     return (
-     
-        
-
-   
-         
-        
-      
       <div style={{"marginTop":"123px"}}>
-      <h2><i className="fa fa-bug" aria-hidden="true"></i> COVID-19</h2>
+      <h2><i className="fa fa-line-chart" style={{"padding-bottom": "15px"}} aria-hidden="true"></i> Trending</h2>
       <div className="row">
-       
-        
-        <CovidCount title="TOTAL CASES" img={img1} count={this.state.confirmedCase} style="primary"/>
-        <CovidCount title="ACTIVE CASES" img={img2} count={this.state.activeCase} style="info"/>
-        <CovidCount title="RECOVERED CASES " img={img3} count={this.state.recovered} style="success"/>
-        <CovidCount title="DEATH CASES" img={img4} count={this.state.death} style="danger"/>
-        
+          <div className="col-md-10">
+              <Treanding/>
+          </div>
+          <div className="col-md-2">
+              <h2 className={"custom"}><i className="fa fa-bug" aria-hidden="true"></i> COVID-19 India</h2>
+              <CovidCount title="TOTAL CASES" img={img1} count={this.state.confirmedCase} style="primary"/>
+              <CovidCount title="ACTIVE CASES" img={img2} count={this.state.activeCase} style="info"/>
+              <CovidCount title="RECOVERED CASES " img={img3} count={this.state.recovered} style="success"/>
+              <CovidCount title="DEATH CASES" img={img4} count={this.state.death} style="danger"/>
+          </div>
+      </div>
+         <div className="row">
         <News/>
-
-       
           <IndiaCovid india_data_api={this.state.india_data_api}/>
-
+      </div>
           <div className="row" style={{"marginTop":"50px"}}>
               <Tweets/>
               <PMTweets/>
@@ -105,7 +90,7 @@ class App extends Component {
           <ScrollToTop showUnder={160}>
               <span id="button"></span>
           </ScrollToTop>
-      </div></div>
+      </div>
 
 
      
