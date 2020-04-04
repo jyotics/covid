@@ -12,7 +12,7 @@ import img2 from '../images/2585234.svg';
 import img3 from '../images/2615192.svg';
 import img4 from '../images/2750681.svg';
 import News from '../components/news';
-
+import NewsList from '../components/news-list';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-000000-01');
@@ -79,14 +79,16 @@ class App extends Component {
           </div>
       </div>
          <div className="row">
-        <News/>
           <IndiaCovid india_data_api={this.state.india_data_api}/>
       </div>
+
+          <div className="row">
+          <NewsList/>
+          </div>
           <div className="row" style={{"marginTop":"50px"}}>
               <Tweets/>
               <PMTweets/>
           </div>
-
           <ScrollToTop showUnder={160}>
               <span id="button"></span>
           </ScrollToTop>

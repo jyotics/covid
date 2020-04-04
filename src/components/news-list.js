@@ -50,7 +50,7 @@ export default  class NewsList extends Component {
       }
     }
     render() {
-      return   <MDBContainer style={{"marginTop":"123px"}}>
+      return   <MDBContainer>
 
 <h3 style={{"textAlign": "left", "lineHeight": "1.4","padding" :"10px"}}><i className="fa fa-newspaper-o" aria-hidden="true"></i> News</h3>
 
