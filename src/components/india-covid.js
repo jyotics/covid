@@ -28,7 +28,7 @@ export default class IndiaCovid extends Component {
       return <div className="col-md-12">
           <div className="panel-heading">
               <h3 style={{"textAlign": "left", "lineHeight": "1.4"}}><i className="fa fa-globe" aria-hidden="true"></i> State
-                  Wise Data</h3>
+                  Wise Data (COVID-19 India)</h3>
           </div>
           <table className="table table-responsive-sm">
               <thead>
