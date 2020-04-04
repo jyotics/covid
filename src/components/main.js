@@ -65,7 +65,7 @@ class App extends Component {
     
     return (
       <div style={{"marginTop":"123px"}}>
-      <h2><i className="fa fa-line-chart" style={{"padding-bottom": "15px"}} aria-hidden="true"></i> Trending</h2>
+      <h2><i className="fa fa-line-chart" style={{"padding-bottom": "15px","padding-left":"14px"}} aria-hidden="true"></i> Trending</h2>
       <div className="row">
           <div className="col-md-10">
               <Treanding/>
