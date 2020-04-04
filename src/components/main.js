@@ -23,7 +23,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {india_data_api: [],confirmedCase:0,activeCase:0,death:0,recovered:0,updated_since:''};
+    this.state = {india_data_api: [],confirmedCase:0,activeCase:0,death:0,recovered:0,WconfirmedCase:0,WactiveCase:0,Wrecovered:0,Wdeath:0};
   }
 
   async componentDidMount() {
@@ -36,9 +36,10 @@ class App extends Component {
       .then((response) => response.json())
       .then(async indiaList => {
         if(indiaList.resp.length >0){
-
             let sortedObj = indiaList["resp"][0]["data"].sort((a, b) => (parseInt(a.confirmedCase) > parseInt(b.confirmedCase)) ? -1 : 1)
-          this.setState({india_data_api:sortedObj,updated_since:indiaList["resp"][0]['createdAt']})
+          this.setState({india_data_api:sortedObj,WconfirmedCase:indiaList["resp"][0]["worldStats"]["totalCases"],
+              WactiveCase:indiaList["resp"][0]["worldStats"]["activeCases"],Wrecovered:indiaList["resp"][0]["worldStats"]["recovered"],
+              Wdeath:indiaList["resp"][0]["worldStats"]["deaths"]})
         }
           await this.mapParameters()
       });
@@ -67,15 +68,22 @@ class App extends Component {
       <div style={{"marginTop":"123px"}}>
       <h2><i className="fa fa-line-chart" style={{"padding-bottom": "15px","padding-left":"14px"}} aria-hidden="true"></i> Trending</h2>
       <div className="row">
-          <div className="col-md-10">
+          <div className="col-md-8">
               <Treanding/>
           </div>
           <div className="col-md-2">
               <h2 className={"custom"}><i className="fa fa-bug" aria-hidden="true"></i> COVID-19 India</h2>
-              <CovidCount title="TOTAL CASES" img={img1} count={this.state.confirmedCase} style="primary"/>
-              <CovidCount title="ACTIVE CASES" img={img2} count={this.state.activeCase} style="info"/>
-              <CovidCount title="RECOVERED CASES " img={img3} count={this.state.recovered} style="success"/>
-              <CovidCount title="DEATH CASES" img={img4} count={this.state.death} style="danger"/>
+              <CovidCount title="TOTAL" img={img1} count={this.state.confirmedCase} style="primary"/>
+              <CovidCount title="ACTIVE" img={img2} count={this.state.activeCase} style="info"/>
+              <CovidCount title="RECOVERED" img={img3} count={this.state.recovered} style="success"/>
+              <CovidCount title="DEATH" img={img4} count={this.state.death} style="danger"/>
+          </div>
+          <div className="col-md-2">
+              <h2 className={"custom"}><i className="fa fa-bug" aria-hidden="true"></i> COVID-19 World</h2>
+              <CovidCount title="TOTAL" img={img1} count={this.state.WconfirmedCase} style="primary"/>
+              <CovidCount title="ACTIVE" img={img2} count={this.state.WactiveCase}  style="info"/>
+              <CovidCount title="RECOVERED " img={img3} count={this.state.Wrecovered}  style="success"/>
+              <CovidCount title="DEATH" img={img4} count={this.state.Wdeath} style="danger"/>
           </div>
       </div>
          <div className="row">
