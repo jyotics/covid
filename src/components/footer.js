@@ -35,7 +35,7 @@ export default  class Footer extends Component {
                   </div>
 
               <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                  <a href="https://livesupdates.com/"> livesupdates.com</a>
+                  <a href="https://newsapi.org/"> livesupdates.com(Powered by News API)</a>
               </div>
    </footer>
       
