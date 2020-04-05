@@ -350,6 +350,9 @@ body{
     .custom {
         margin-top: 10px;
     }
+    .navbar img{
+        width: 327px !important;
+    }
 
 
 }
@@ -515,3 +518,13 @@ font-size: 10px;
 }
 
 
+.news_descriptive .card-title{
+    font-size: 19px !important;
+
+}
+
+.news_descriptive .card{
+    height: 500px !important;
+    margin-top: 10px;
+
+}

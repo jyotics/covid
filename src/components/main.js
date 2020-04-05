@@ -13,6 +13,7 @@ import img3 from '../images/2615192.svg';
 import img4 from '../images/2750681.svg';
 import News from '../components/news';
 import NewsList from '../components/news-list';
+import ShortList from '../components/short-descriptive-news';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-000000-01');
@@ -92,6 +93,9 @@ class App extends Component {
 
           <div className="row">
           <NewsList/>
+          </div>
+          <div className="row" style={{"marginTop":"50px"}}>
+              <ShortList/>
           </div>
           <div className="row" style={{"marginTop":"50px"}}>
               <Tweets/>
