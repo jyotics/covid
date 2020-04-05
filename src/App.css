@@ -528,3 +528,13 @@ font-size: 10px;
     margin-top: 10px;
 
 }
+
+.news_descriptive img{
+    width: 100%;
+    height: 200px;
+
+}
+.news_descriptive .pink-text {
+    color: #e91e63 !important;
+    text-align: center;
+}

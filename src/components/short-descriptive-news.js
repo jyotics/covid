@@ -53,7 +53,7 @@ export default  class NewsList extends Component {
     }
     render() {
         return <div className="news_descriptive">
-        <h3 style={{"textAlign": "left", "lineHeight": "1.4","padding" :"10px"}}><i className="fa fa-newspaper-o" aria-hidden="true"></i> Short News</h3>
+        <h3 style={{"textAlign": "left", "lineHeight": "1.4","padding" :"10px"}}><i className="fa fa-eye" aria-hidden="true"></i> Short News</h3>
 
         <MDBRow>
             {this.state.news.map((item, i) => (
