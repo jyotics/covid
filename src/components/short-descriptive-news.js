@@ -30,7 +30,7 @@ export default  class NewsList extends Component {
 
     fetchNews = async(prevStateNews) =>{
         console.log("HERE",prevStateNews)
-        var url = `https://livesupdates.com/stats/v1/covid/getnews?page=${this.state.activeItem }&limit=9`
+        var url = `https://livesupdates.com/stats/v1/covid/short/description?page=${this.state.activeItem }&limit=9`
         fetch(url)
             .then((response) => response.json())
             .then(indiaList => {
@@ -52,7 +52,7 @@ export default  class NewsList extends Component {
         }
     }
     render() {
-        return <div className="news_descriptive">
+        return <div className="news_descriptive" style={{display:this.state.news.length > 0? 'block' : 'none' }}>
         <h3 style={{"textAlign": "left", "lineHeight": "1.4","padding" :"10px"}}><i className="fa fa-eye" aria-hidden="true"></i> Short News</h3>
 
         <MDBRow>
