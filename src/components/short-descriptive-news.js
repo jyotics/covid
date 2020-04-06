@@ -71,9 +71,8 @@ export default  class NewsList extends Component {
 
                         <MDBCardBody>
                             <h5 className='pink-text'>
-                                <MDBIcon icon='utensils' /> {item.author}
+                                <MDBIcon icon='utensils' /> {item.info}
                             </h5>
-
                             <MDBCardTitle className='font-weight-bold'>
                                 {item.title}
                             </MDBCardTitle>

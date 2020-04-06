@@ -536,5 +536,7 @@ font-size: 10px;
 }
 .news_descriptive .pink-text {
     color: #e91e63 !important;
-    text-align: center;
+    font-size: x-small;
+    font-weight: 500 !important;
+    margin-left: -10px;
 }
