@@ -539,4 +539,5 @@ font-size: 10px;
     font-size: x-small;
     font-weight: 500 !important;
     margin-left: -10px;
+    display: flex;
 }

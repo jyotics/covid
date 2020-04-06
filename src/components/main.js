@@ -92,10 +92,10 @@ class App extends Component {
       </div>
 
           <div className="row">
-          <NewsList/>
+              <ShortList/>
           </div>
           <div className="row" style={{"marginTop":"50px"}}>
-              <ShortList/>
+              <NewsList/>
           </div>
           <div className="row" style={{"marginTop":"50px"}}>
               <Tweets/>
