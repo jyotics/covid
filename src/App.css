@@ -535,9 +535,16 @@ font-size: 10px;
 
 }
 .news_descriptive .pink-text {
-    color: #e91e63 !important;
-    font-size: x-small;
-    font-weight: 500 !important;
-    margin-left: -10px;
+
     display: flex;
+    width: 100%;
+    margin: auto;
+    font-size: smaller;
+    margin-top: 3px;
+    font-weight: 800 !important;
+    color: white !important;
+    background: #c3352d;
+    background-position: 40% 50%;
+    position: relative;
+    text-align: center;
 }

@@ -68,11 +68,11 @@ export default  class NewsList extends Component {
                                 alt='food'
                             />
                         </MDBView>
-
+                        <h5 className='pink-text'>
+                            <MDBIcon icon='utensils' /> {item.info}
+                        </h5>
                         <MDBCardBody>
-                            <h5 className='pink-text'>
-                                <MDBIcon icon='utensils' /> {item.info}
-                            </h5>
+
                             <MDBCardTitle className='font-weight-bold'>
                                 {item.title}
                             </MDBCardTitle>
