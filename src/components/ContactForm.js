@@ -104,8 +104,6 @@ const validEmailRegex =
                     email : this.state.email,
                     subject : this.state.subject,
                     message : this.state.message
-                    
-        
                 }
 
                 axios.post(CONFIG_URL+"/send_mail", bodyFormData, {
@@ -116,11 +114,10 @@ const validEmailRegex =
                     if (result.data.status==200) {
                         this.setState
                         (
-                            
                             {isLoading: false,
                             successMsg:"Thanks for Contacting Us",
-                            errorMsg:' ',
-                            all_field_err:' ',
+                            errorMsg:undefined,
+                            all_field_err:undefined,
                             name :'',email :'',subject :'',message :''});
                          
     
@@ -192,10 +189,10 @@ const validEmailRegex =
               {successMsg.length > 0 && 
   <div class="alert alert-success" role="alert" >{successMsg}</div>}
 
-    {errorMsg.length > 0 && 
+    {errorMsg &&
   <div class="alert alert-danger" role="alert" style={{display: errorMsg ? 'block' : 'none' }}>{errorMsg}</div>}
 
-{all_field_err.length > 0 && 
+{all_field_err &&
   <div class="alert alert-danger" role="alert" style={{display: all_field_err? 'block' : 'none' }}>{all_field_err}</div>}
 
 
