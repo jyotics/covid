@@ -547,4 +547,7 @@ font-size: 10px;
     background-position: 40% 50%;
     position: relative;
     text-align: center;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
