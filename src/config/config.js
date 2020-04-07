@@ -1,0 +1,1 @@
+export const CONFIG_URL='https://livesupdates.com/stats/v1/covid'

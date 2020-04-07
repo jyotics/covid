@@ -4,6 +4,10 @@ import IndiaCovid from '../components/india-covid';
 import CovidCount from '../components/worldwide-covid';
 import Tweets from '../components/tweets';
 import PMTweets from '../components/PMtweets';
+
+import ContactForm from '../components/ContactForm';
+
+
 import Treanding from '../components/trending';
 import ScrollToTop from 'react-scroll-up';
 
@@ -101,6 +105,7 @@ class App extends Component {
               <Tweets/>
               <PMTweets/>
           </div>
+          <ContactForm/>
           <ScrollToTop showUnder={160}>
               <span id="button"></span>
           </ScrollToTop>

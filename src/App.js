@@ -13,9 +13,9 @@ import {
 } from 'react-router-dom'
 
 
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-000000-01');
-ReactGA.pageview(window.location.pathname + window.location.search);
+// import ReactGA from 'react-ga';
+// ReactGA.initialize('UA-000000-01');
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
 
