@@ -270,9 +270,9 @@ const validEmailRegex =
                       <li><p></p>
                       </li>
 
-                            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                            {/* <li><i class="fas fa-envelope mt-4 fa-2x"></i>
                                                     <p>livesupdates@gmail.com</p>
-                                                </li>
+                                                </li> */}
 
                       <li><p></p>
                       </li>
