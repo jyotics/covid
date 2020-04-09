@@ -30,9 +30,13 @@ class App extends Component {
   }
 
 
-  
+    getData(data){
+        console.log(data);
+    }
+
+
   render() {
-    
+
     return (
       <Router>
         <div className="container">
@@ -42,11 +46,11 @@ class App extends Component {
           <NewsList />
         </Route>
 
-        <Route path="/blog/:blogId">
-          <BlogDetail />
+        <Route path="/blog/:blogId" >
+          <BlogDetail/>
         </Route>
 
-        <Route path="/blog">
+        <Route path="/blog" children={<BlogDetail />}>
           <Blog />
         </Route>
 

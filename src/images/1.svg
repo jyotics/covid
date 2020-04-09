@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="271px" height="54px" viewBox="0 0 271 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-22.000000, -22.000000)">
+            <g id="Group" transform="translate(22.000000, 22.000000)">
+                <text id="Updates" font-family="Phosphate-Solid, Phosphate" font-size="36" font-weight="normal" letter-spacing="2.56999993">
+                    <tspan x="109.091" y="40" fill="#EC0000"> </tspan>
+                    <tspan x="118.861" y="40" fill="#FF0000">Update</tspan>
+                    <tspan x="255.709" y="40" fill="#FF0000">s</tspan>
+                </text>
+                <rect id="Rectangle" fill="#FF0000" x="0.399824087" y="0" width="109.000176" height="54"></rect>
+                <text id="Lives" font-family="Phosphate-Solid, Phosphate" font-size="36" font-weight="normal" letter-spacing="2.56999993" fill="#FFFFFF">
+                    <tspan x="8.17500017" y="40">Lives</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

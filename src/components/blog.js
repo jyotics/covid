@@ -19,7 +19,7 @@ import {
 
     state = {
         isLoading: false,
-        TblogList :[]
+        TblogList :[],
     };
 
 
@@ -57,10 +57,10 @@ import {
                       </div>
                   </div>
               <div class="col-lg-7 col-xl-7">
-                <h3 class="font-weight-bold mb-3 custom-font-crausal"><strong><a class="text-decoration-anchor" href={item.url}>{item.title}</a></strong></h3>
+                <h3 class="font-weight-bold mb-3 custom-font-crausal"><strong><a class="text-decoration-anchor">{item.title}</a></strong></h3>
                 <p>{item.description}</p>
                   <p>by <a class="font-weight-bold">Jessica Clark</a>, 19/04/2018</p>
-                  <Link to ="blog/"><a class="btn btn-primary btn-md" >Read more</a></Link>
+                  <Link to ={`/blog/${item.newsUrl}`}>Read more</Link>
                 </div>
           </div>
             ))}     
