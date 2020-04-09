@@ -4,6 +4,10 @@ import Main from './components/main';
 import NewsList from './components/news-list';
 import MenuHeader from './components/menuheader';
 import Footer from './components/footer';
+import Blog from './components/blog';
+
+import BlogDetail from './components/blogDetail';
+
 
 
 import {
@@ -37,9 +41,25 @@ class App extends Component {
         <Route path="/news">
           <NewsList />
         </Route>
+
+        <Route path="/blog/:blogId">
+          <BlogDetail />
+        </Route>
+
+        <Route path="/blog">
+          <Blog />
+        </Route>
+
+        
+
         <Route path="/">
           <Main />
         </Route>
+       
+
+        {/* <Route path="blog/:productId"
+            render={ (props) => <Product data= {productsData} {...props} />}/> */}
+
       </Switch> 
 
 

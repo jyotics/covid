@@ -5,6 +5,9 @@ import CovidCount from '../components/worldwide-covid';
 import Tweets from '../components/tweets';
 import PMTweets from '../components/PMtweets';
 
+import Blog from '../components/blog';
+
+
 import ContactForm from '../components/ContactForm';
 
 
@@ -74,7 +77,7 @@ class App extends Component {
       <h2><i className="fa fa-line-chart" style={{"padding-bottom": "15px","padding-left":"14px"}} aria-hidden="true"></i> Trending</h2>
       <div className="row">
           <div className="col-md-8">
-              <Treanding/>
+          <Blog/>
           </div>
           <div className="col-md-2">
               <h2 className={"custom"}><i className="fa fa-bug" aria-hidden="true"></i> COVID-19 India</h2>
@@ -91,6 +94,9 @@ class App extends Component {
               <CovidCount title="DEATH" img={img4} count={this.state.Wdeath} style="danger"/>
           </div>
       </div>
+
+      
+      
          <div className="row">
           <IndiaCovid india_data_api={this.state.india_data_api}/>
       </div>
