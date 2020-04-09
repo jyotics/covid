@@ -112,6 +112,11 @@ p {
 .card.summary .domain {
   color: #888;
 }
+.card .card-body .card-text {
+  font-size: 0.8rem !important;
+  font-weight: 400;
+  color: #747373;
+}
 
 
 
@@ -519,7 +524,7 @@ font-size: 10px;
 
 
 .news_descriptive .card-title{
-    font-size: 19px !important;
+    font-size: 15px !important;
 
 }
 
@@ -534,21 +539,12 @@ font-size: 10px;
     height: 200px;
 
 }
-.news_descriptive .pink-text {
-
-    display: flex;
-}
-
 .col-md-8 .my-5 {
   margin-top: 1rem!important
 }
+.news_descriptive .pink-text {
 
-.col-md-8 .mb-3{
-  font-size: 1rem !important;
-
-}
-.col-md-8 .dark-grey-text {
-  font-size: 0.8rem !important;
+    display: flex;
     width: 100%;
     margin: auto;
     font-size: smaller;
