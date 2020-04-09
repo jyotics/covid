@@ -23,7 +23,7 @@ import {MDBBtn} from "mdbreact";
       }
 
       fetchNews = async(urlAddress) =>{
-          var url = `http://localhost:8000/v1/covid/trending/coronavirus-in-india-540-new-cases-17-deaths-in-24-hours-covid-19-tally-climbs-to-5734`
+          var url = 'https://livesupdates.com/stats/v1/covid/trending/'+urlAddress
           fetch(url)
               .then((response) => response.json())
               .then(indiaList => {
