@@ -59,8 +59,15 @@ import {
               <div class="col-lg-7 col-xl-7">
                 <h3 class="font-weight-bold mb-3 custom-font-crausal"><strong><a class="text-decoration-anchor">{item.title}</a></strong></h3>
                 <p>{item.description}</p>
-                  <p>by <a class="font-weight-bold">Jessica Clark</a>, 19/04/2018</p>
-                  <Link to ={`/blog/${item.newsUrl}`}>Read more</Link>
+
+
+                  {(`${item.newsUrl}`)!=undefined &&
+                      <div class="text-center">
+                      <Link to ={`/blog/${item.newsUrl}`} >
+                          <button type="button" className="btn btn-primary">Read more</button></Link>
+                  </div>
+                  }
+
                 </div>
           </div>
             ))}     
