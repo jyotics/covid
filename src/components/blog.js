@@ -30,7 +30,7 @@ import {
     }
   
     fetchNews = async() =>{
-      var url = `https://livesupdates.com/stats/v1/covid/trending?page=1&limit=2`
+      var url = `https://livesupdates.com/stats/v1/covid/trending?page=1&limit=4`
       fetch(url)
           .then((response) => response.json())
           .then(indiaList => {
@@ -42,49 +42,28 @@ import {
         
         return <section class="my-5">
           <Carousel
-  keepDirectionWhenDragging
-  infinite
-  dots
-  
->
-<div class="row">
-            <div class="col-lg-5 col-xl-5">
-        
-        <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" alt="Sample image"/>
-          <a>
-            <div class="mask rgba-white-slight"></div>
-          </a>
-        </div>
-  
-      </div>
-            <div class="col-lg-7 col-xl-7">
-              <h3 class="font-weight-bold mb-3"><strong>Title of the new article</strong></h3><p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-          quo minus id quod maxime.</p>
-        {/* <p>by <a class="font-weight-bold">Jessica Clark</a>, 19/04/2018</p> */}
-        <Link to ="blog/sadsad"><a class="btn btn-primary btn-md">Read more</a></Link>
-  
-      </div>
+          keepDirectionWhenDragging
+          infinite
+          dots>
+            {this.state.TblogList.map((item, i) => (
+              
+              <div class="row">
+                <div class="col-lg-5 col-xl-5">
+                  <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+                    <img class="img-fluid" src={item.urlToImage} alt="Sample image"/>
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                      </a>
+                      </div>
+                  </div>
+              <div class="col-lg-7 col-xl-7">
+                <h3 class="font-weight-bold mb-3 custom-font-crausal"><strong><a class="text-decoration-anchor" href={item.url}>{item.title}</a></strong></h3>
+                <p>{item.description}</p>
+                  <p>by <a class="font-weight-bold">Jessica Clark</a>, 19/04/2018</p>
+                  <Link to ="blog/"><a class="btn btn-primary btn-md" >Read more</a></Link>
+                </div>
           </div>
-          <div class="row">
-            <div class="col-lg-5 col-xl-5">
-        
-        <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" alt="Sample image"/>
-          <a>
-            <div class="mask rgba-white-slight"></div>
-          </a>
-        </div>
-  
-      </div>
-            <div class="col-lg-7 col-xl-7">
-              <h3 class="font-weight-bold mb-3"><strong>Title of the new article</strong></h3><p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-          quo minus id quod maxime.</p>
-        {/* <p>by <a class="font-weight-bold">Jessica Clark</a>, 19/04/2018</p> */}
-        <Link to ="blog/sadsad"><a class="btn btn-primary btn-md">Read more</a></Link>
-  
-      </div>
-          </div>
+            ))}     
 </Carousel>
           
         
