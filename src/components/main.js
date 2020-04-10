@@ -7,6 +7,9 @@ import PMTweets from '../components/PMtweets';
 
 import Blog from '../components/blog';
 
+import Table from '../components/Table';
+
+
 
 import ContactForm from '../components/ContactForm';
 
@@ -74,31 +77,36 @@ class App extends Component {
     
     return (
       <div style={{"marginTop":"123px"}}>
-      <h2><i className="fa fa-line-chart" style={{"padding-bottom": "15px","padding-left":"14px"}} aria-hidden="true"></i> Trending</h2>
       <div className="row">
-          <div className="col-md-8">
-          <Blog/>
+          <div className="col-md-8" style={{"margin-bottom":"20px"}}>
+          
+          <Table india_data_api={this.state.india_data_api}/>
+         
           </div>
-          <div className="col-md-2">
+          <div className="col-md-4">
               <h2 className={"custom"}><i className="fa fa-bug" aria-hidden="true"></i> COVID-19 India</h2>
               <CovidCount title="TOTAL" img={img1} count={this.state.confirmedCase} style="primary"/>
               <CovidCount title="ACTIVE" img={img2} count={this.state.activeCase} style="info"/>
               <CovidCount title="RECOVERED" img={img3} count={this.state.recovered} style="success"/>
               <CovidCount title="DEATH" img={img4} count={this.state.death} style="danger"/>
-          </div>
-          <div className="col-md-2">
-              <h2 className={"custom"}><i className="fa fa-bug" aria-hidden="true"></i> COVID-19 World</h2>
+              <br/>
+               <h2 className={"custom"}><i className="fa fa-bug" aria-hidden="true"></i> COVID-19 World</h2>
               <CovidCount title="TOTAL" img={img1} count={this.state.WconfirmedCase} style="primary"/>
               <CovidCount title="ACTIVE" img={img2} count={this.state.WactiveCase}  style="info"/>
               <CovidCount title="RECOVERED " img={img3} count={this.state.Wrecovered}  style="success"/>
               <CovidCount title="DEATH" img={img4} count={this.state.Wdeath} style="danger"/>
           </div>
+         
       </div>
 
       
+      <h2><i className="fa fa-line-chart" style={{"padding-bottom": "15px","padding-left":"14px"}} aria-hidden="true"></i>Blogs</h2>
       
          <div className="row">
-          <IndiaCovid india_data_api={this.state.india_data_api}/>
+         <div className="col-md-12">
+          
+          <Blog/>
+          </div>
       </div>
 
           <div className="row">

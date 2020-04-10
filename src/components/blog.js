@@ -1,14 +1,38 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import {CONFIG_URL} from '../config/config';
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 
 import {
   BrowserRouter as Router,Switch,
   Route,
   Link
 } from 'react-router-dom'
+
+
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
+
 
   export default  class Blog extends Component {
 
@@ -40,42 +64,31 @@ import {
 
     render() {
         
-        return <section class="my-5">
-          <Carousel
-          keepDirectionWhenDragging
-          infinite
-          dots>
-            {this.state.TblogList.map((item, i) => (
-              
-              <div class="row">
-                <div class="col-lg-5 col-xl-5">
-                  <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                    <img class="img-fluid" src={item.urlToImage} alt="Sample image"/>
-                    <a>
-                      <div class="mask rgba-white-slight"></div>
-                      </a>
-                      </div>
-                  </div>
-              <div class="col-lg-7 col-xl-7">
-                <h3 class="font-weight-bold mb-3 custom-font-crausal"><strong><a class="text-decoration-anchor">{item.title}</a></strong></h3>
-                <p>{item.description}</p>
 
 
-                  {(`${item.newsUrl}`)!=undefined &&
+        return <Carousel responsive={responsive}>
+
+        {this.state.TblogList.map((item, i) => (
+
+  <div class="card" style={{"width": "22rem","height": "35rem"}}>
+  <img class="card-img-top" src={item.urlToImage}  alt="Card image cap"/>
+  <div class="card-body">
+
+  <div class="card-body-sub">
+    <h5 class="card-title">{item.title}</h5>
+    <p class="card-text">{item.description}</p>
+  </div>
+   {(`${item.newsUrl}`)!=undefined &&
                       <div class="text-center">
                       <Link to ={`/blog/${item.newsUrl}`} >
                           <button type="button" className="btn btn-primary">Read more</button></Link>
                   </div>
                   }
-
-                </div>
-          </div>
-            ))}     
+  </div>
+</div>
+   ))} 
 </Carousel>
-          
         
-          <hr class="my-5"/>
-        </section>
        
     }
   }

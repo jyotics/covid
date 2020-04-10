@@ -6,6 +6,7 @@ import {CONFIG_URL} from '../config/config';
 import {Link} from "react-router-dom";
 import {MDBBtn} from "mdbreact";
 import Moment from "react-moment";
+import CommentBlog from '../components/commentBlog';
 
 
   export default  class BlogDetail extends Component {
@@ -89,7 +90,7 @@ import Moment from "react-moment";
                   <div className="text-center">
                       <Link to='/'><MDBBtn color="primary">BACK</MDBBtn></Link>
                   </div>
-
+                  <CommentBlog blog_id={this.state.contentData._id}/> 
               </MDBCard>
           );
       }

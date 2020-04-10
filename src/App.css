@@ -583,3 +583,6 @@ img {
     border-style: none;
     max-width: -webkit-fill-available !important;
 }
+.card-body-sub{
+  height: 15rem;
+}
