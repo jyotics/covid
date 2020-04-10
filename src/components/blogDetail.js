@@ -45,9 +45,9 @@ import Moment from "react-moment";
                   style={{fontWeight: 300, maxWidth: "90%"}}
               >
                   <MDBCardBody style={{paddingTop: 0}}>
-                      <h2 className="h1-responsive font-weight-bold my-5 text-center">
+                      <h1 className="h1-responsive font-weight-bold my-5 text-center">
                           {this.state.contentData.title}
-                      </h2>
+                      </h1>
                       <p className="dark-grey-text mx-auto mb-5 w-75 text-center">
                           {this.state.contentData.description}
                       </p>
