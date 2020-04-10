@@ -5,6 +5,7 @@ import NewsList from './components/news-list';
 import MenuHeader from './components/menuheader';
 import Footer from './components/footer';
 import Blog from './components/blog';
+import createHistory from 'history/createBrowserHistory';
 
 import BlogDetail from './components/blogDetail';
 
@@ -38,7 +39,7 @@ class App extends Component {
   render() {
 
     return (
-      <Router>
+      <Router history={createHistory()}>
         <div className="container">
       <MenuHeader updated_since={this.state.updated_since}/>
       <Switch>
