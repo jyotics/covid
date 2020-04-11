@@ -84,7 +84,7 @@ import {Redirect } from 'react-router-dom'
      
               <MDBCard
                   className="my-12 px-12 mx-auto"
-                  style={{fontWeight: 300, maxWidth: "90%"}}
+                  style={{fontWeight: 300, maxWidth: "100%"}}
               >
                   <MDBCardBody style={{paddingTop: 0}}>
                       <h1 className="h1-responsive font-weight-bold my-5 text-center">
@@ -162,7 +162,7 @@ import {Redirect } from 'react-router-dom'
   
     </div>
     <hr/>
-    
+    <CommentBlog blog_id={this.state.contentData._id}/> 
 
   </div>
           );
