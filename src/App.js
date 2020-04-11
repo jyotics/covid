@@ -40,7 +40,7 @@ class App extends Component {
   render() {
 
     return (
-      <Router history={createHistory()}>
+      <Router>
         <div className="container">
       <MenuHeader updated_since={this.state.updated_since}/>
       <Switch>

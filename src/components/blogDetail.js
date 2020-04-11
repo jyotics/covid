@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import {MDBBtn} from "mdbreact";
 import Moment from "react-moment";
 import CommentBlog from '../components/commentBlog';
-import {Redirect ,useHistory} from 'react-router-dom'
+import {Redirect } from 'react-router-dom'
 
 
 
@@ -22,35 +22,37 @@ import {Redirect ,useHistory} from 'react-router-dom'
 
       state = {
         TtblogList :[],
-        contentData: ""
+        contentData: "",
+        urlAddress:""
     };
 
    
   
 
-  clickHandler = () => {
-  if (this.props.match.params.blogId !== 0 && this.props.match.params.blogId !== '') {
-    return (
-      <Redirect 
-        to={`/blog/${this.props.match.params.blogId}`}
-      />
-    );
-  }
-}
-    
+   
      
 
       componentDidMount() {
           //const urlAddress = this.props.location.pathname.split("/")[2];
+         const urlAddress = this.props.match.params.blogId;
+        
 
-          const urlAddress = this.props.match.params.blogId;
+        //   this.setState({urlAddress: urlAddress});
+        debugger;
           console.log(urlAddress);
           this.fetchNews(urlAddress)
 
           this.fetchNewsList();
       }
 
-      fetchNews = async (urlAddress) => {
+
+      clickHandler = (url) => {
+        this.setState({urlAddress: url});
+        this.fetchNews(url)
+      }
+   
+      
+      fetchNews = (urlAddress) => {
           var url = CONFIG_URL+'/trending/' + urlAddress
           fetch(url)
               .then((response) => response.json())
@@ -59,7 +61,7 @@ import {Redirect ,useHistory} from 'react-router-dom'
               });
       }
 
-      fetchNewsList = async() =>{
+      fetchNewsList = () =>{
       var url = `https://livesupdates.com/stats/v1/covid/trending?page=1&limit=6`
       fetch(url)
           .then((response) => response.json())
@@ -148,8 +150,10 @@ import {Redirect ,useHistory} from 'react-router-dom'
   </div>
    {(`${item.newsUrl}`)!=undefined &&
                       <div class="text-center">
-                      <a onClick={() =>this.clickHandler }>
-                          <button type="button" className="btn btn-primary">Read more</button></a>
+                      
+                  
+                          <Link to ={`/blog/${item.newsUrl}`} >
+                          <button type="button" className="btn btn-primary" onClick={(url) =>this.clickHandler(item.newsUrl)}>Read more</button></Link>
                   </div>
                   }
   </div>
