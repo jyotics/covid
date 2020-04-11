@@ -7,6 +7,8 @@ import {Link} from "react-router-dom";
 import {MDBBtn} from "mdbreact";
 import Moment from "react-moment";
 import CommentBlog from '../components/commentBlog';
+import {Redirect ,useHistory} from 'react-router-dom'
+
 
 
   export default  class BlogDetail extends Component {
@@ -17,13 +19,35 @@ import CommentBlog from '../components/commentBlog';
 
       }
 
-      state = {
-          contentData: ""
-      };
 
-      async componentDidMount() {
-          const urlAddress = window.location.href.split("/")[4];
+      state = {
+        TtblogList :[],
+        contentData: ""
+    };
+
+   
+  
+
+  clickHandler = () => {
+  if (this.props.match.params.blogId !== 0 && this.props.match.params.blogId !== '') {
+    return (
+      <Redirect 
+        to={`/blog/${this.props.match.params.blogId}`}
+      />
+    );
+  }
+}
+    
+     
+
+      componentDidMount() {
+          //const urlAddress = this.props.location.pathname.split("/")[2];
+
+          const urlAddress = this.props.match.params.blogId;
+          console.log(urlAddress);
           this.fetchNews(urlAddress)
+
+          this.fetchNewsList();
       }
 
       fetchNews = async (urlAddress) => {
@@ -35,12 +59,27 @@ import CommentBlog from '../components/commentBlog';
               });
       }
 
+      fetchNewsList = async() =>{
+      var url = `https://livesupdates.com/stats/v1/covid/trending?page=1&limit=6`
+      fetch(url)
+          .then((response) => response.json())
+          .then(indiaList => {
+              this.setState({ TtblogList:indiaList["resp"]["docs"]});
+          });
+  }
+
+
+
       createMarkup = function () {
           return {__html: this.state.contentData.content};
       }
 
       render() {
           return (
+
+             <div class="row" style={{"marginTop":"70px"}}>
+    <div class="col-md-8">
+     
               <MDBCard
                   className="my-12 px-12 mx-auto"
                   style={{fontWeight: 300, maxWidth: "90%"}}
@@ -90,65 +129,40 @@ import CommentBlog from '../components/commentBlog';
                   <div className="text-center">
                       <Link to='/'><MDBBtn color="primary">BACK</MDBBtn></Link>
                   </div>
-                  <CommentBlog blog_id={this.state.contentData._id}/> 
+                  
               </MDBCard>
+
+
+    </div>
+    <div class="col-md-4">
+      
+
+    {this.state.TtblogList.map((item, i) => (
+
+  <div class="card" style={{"width": "22rem","height": "auto","marginTop":"5px"}}>
+  <img class="card-img-top" src={item.urlToImage}  alt="Card image cap"/>
+  <div class="card-body">
+
+  <div class="card-body-sub-u">
+    <h5 class="card-title">{item.title}</h5>
+  </div>
+   {(`${item.newsUrl}`)!=undefined &&
+                      <div class="text-center">
+                      <a onClick={() =>this.clickHandler }>
+                          <button type="button" className="btn btn-primary">Read more</button></a>
+                  </div>
+                  }
+  </div>
+</div>
+   ))} 
+  
+    </div>
+    <hr/>
+    <CommentBlog blog_id={this.state.contentData._id}/> 
+
+  </div>
           );
       }
   }
 
 
-
-// import React, { Component } from 'react';
-// import axios from 'axios';
-// import {CONFIG_URL} from '../config/config';
-// import {Link} from "react-router-dom";
-// import {MDBBtn} from "mdbreact";
-//
-//
-//   export default  class BlogDetail extends Component {
-//
-//
-//
-//       constructor(props){
-//           super(props);
-//
-//       }
-//       state = {
-//           contentData:""
-//       };
-//
-//       async componentDidMount() {
-//           const urlAddress = window.location.href.split("/")[4];
-//           this.fetchNews(urlAddress)
-//       }
-//
-//       fetchNews = async(urlAddress) =>{
-//           var url = 'https://livesupdates.com/stats/v1/covid/trending/'+urlAddress
-//           fetch(url)
-//               .then((response) => response.json())
-//               .then(indiaList => {
-//                   this.setState({ contentData:indiaList["resp"]});
-//               });
-//       }
-//
-//       createMarkup = function() {
-//           return {__html: this.state.contentData.content};
-//       }
-//
-//     render() {
-//
-//         return <section className="me">
-//             <h1>{this.state.contentData.title}</h1>
-//             <div dangerouslySetInnerHTML={this.createMarkup()} />
-//             <div className="text-center">
-//                 <Link to='/'><MDBBtn color="primary">Read Latest News</MDBBtn></Link>
-//             </div>
-//         </section>
-//     }
-//   }
-//
-//
-//
-//
-//
-//

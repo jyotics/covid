@@ -6,6 +6,7 @@ import MenuHeader from './components/menuheader';
 import Footer from './components/footer';
 import Blog from './components/blog';
 import createHistory from 'history/createBrowserHistory';
+import {withRouter} from 'react-router';
 
 import BlogDetail from './components/blogDetail';
 
@@ -47,11 +48,10 @@ class App extends Component {
           <NewsList />
         </Route>
 
-        <Route path="/blog/:blogId" >
-          <BlogDetail/>
-        </Route>
+        <Route exact path="/blog/:blogId" component={withRouter(BlogDetail)} />
+          
 
-        <Route path="/blog" children={<BlogDetail />}>
+        <Route exact path="/blog">
           <Blog />
         </Route>
 

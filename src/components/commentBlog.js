@@ -167,11 +167,11 @@ const validEmailRegex =
 
       
 
-      <MDBContainer>
+     
 
            
 
-        <MDBCardHeader className="border-0 font-weight-bold d-flex justify-content-between" style={{"backgroundColor":"rgb(244, 67, 54)","color":"white"}}>
+        <MDBCardHeader className="border-0 font-weight-bold d-flex justify-content-between" style={{"backgroundColor":"rgb(244, 67, 54)","color":"white","marginTop":"25px"}}>
           <p className="mr-4 mb-0">Comments</p>
           
         </MDBCardHeader>
@@ -255,7 +255,7 @@ const validEmailRegex =
             </MDBPageNav>
           </MDBPageItem>
         </MDBPagination>
-      </MDBContainer>
+      
 
        
       

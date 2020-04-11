@@ -54,7 +54,7 @@ const responsive = {
     }
   
     fetchNews = async() =>{
-      var url = `https://livesupdates.com/stats/v1/covid/trending?page=1&limit=4`
+      var url = `https://livesupdates.com/stats/v1/covid/trending?page=1&limit=100`
       fetch(url)
           .then((response) => response.json())
           .then(indiaList => {

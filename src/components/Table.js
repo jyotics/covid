@@ -64,7 +64,7 @@ const data = this.props.india_data_api
       selectableRows: false,
       print : false,
       download :false,
-      filter:false,
+      filter:false
     };
 
     return (
