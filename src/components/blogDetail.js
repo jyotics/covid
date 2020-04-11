@@ -141,7 +141,7 @@ import {Redirect } from 'react-router-dom'
 
     {this.state.TtblogList.map((item, i) => (
 
-  <div class="card" style={{"width": "22rem","height": "auto","marginTop":"5px"}}>
+  <div class="card" style={{"width": "24rem","height": "auto","marginTop":"5px"}}>
   <img class="card-img-top" src={item.urlToImage}  alt="Card image cap"/>
   <div class="card-body">
 
@@ -162,7 +162,7 @@ import {Redirect } from 'react-router-dom'
   
     </div>
     <hr/>
-    <CommentBlog blog_id={this.state.contentData._id}/> 
+    
 
   </div>
           );
