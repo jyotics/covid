@@ -162,7 +162,7 @@ import {Redirect } from 'react-router-dom'
   
     </div>
     <hr/>
-    <CommentBlog blog_id={this.state.contentData._id}/> 
+    
 
   </div>
           );
